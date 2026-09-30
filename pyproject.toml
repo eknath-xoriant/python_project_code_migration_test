@@ -1,0 +1,8 @@
+[project]
+name = "python_project_code_migration_test"
+version = "0.1.0"
+description = "Sample Python 3.7 codebase for migration testing"
+requires-python = ">=3.7,<3.8"
+
+[tool.pytest.ini_options]
+addopts = "-q"
