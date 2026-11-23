@@ -1,6 +1,6 @@
 import asyncio
 import inspect
-from collections import MutableMapping
+from collections.abc import MutableMapping
 
 
 class LegacyCache(MutableMapping):
@@ -24,8 +24,8 @@ class LegacyCache(MutableMapping):
 
 
 def legacy_signature_report(target):
-    """Uses inspect.getargspec (removed in Python 3.11)."""
-    spec = inspect.getargspec(target)  # noqa: B009
+    """Uses inspect.getfullargspec (removed in Python 3.11)."""
+    spec = inspect.getfullargspec(target)  # noqa: B009
     return f"Legacy argspec: {spec.args}"
 
 
